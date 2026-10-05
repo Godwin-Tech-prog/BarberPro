@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>BarberPro | Modern Barbershop</title>
+
+    <link rel="icon" href="images/logo.jpg" type="image/png">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo"><img src="images/logo.jpg" alt=""></a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn">☰</button>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+                <p class="subtitle">WELCOME TO BARBERPRO</p>
+
+                <h1>
+                     Look Sharp.<br>
+                     Feel Confident.
+                </h1>
+
+                <p>
+                     Professional haircuts and grooming services
+                     designed to give you your best look.
+                </p>
+
+            <div class="hero-buttons">
+                <a href="#booking" class="btn">Book Appointment</a>
+                <a href="#services" class="btn secondary-btn">
+                Our Services
+                </a>
+            </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="images/hero-barbar.jpg.jpg"
+                alt="Professional barber giving a haircut">
+            </div>
+
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="about">
+
+            <div class="section-heading">
+                <p>WHO WE ARE</p>
+                <h2>More Than Just a Haircut</h2>
+            </div>
+
+            <div class="about-content">
+                
+                <div class="about-image">
+                     <img src="images/about-barbar.jpg.jpg" alt="Professional barber serving a client">
+                </div>
+
+                <div class="about-text">
+                    <h3>Style, Confidence & Quality</h3>
+
+                    <p>
+                        At BarberPro, we believe a great haircut
+                        is more than just looking good. It's about
+                        confidence, comfort and feeling your best.
+                    </p>
+
+                    <p>
+                        Our experienced barbers are committed to
+                        providing quality grooming services in a
+                        clean and welcoming environment.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+
+            <div class="section-heading">
+                <p>WHAT WE OFFER</p>
+                <h2>Our Services</h2>
+            </div>
+
+            <div class="services-container">
+
+                <article class="service-card">
+                    <h3>Classic Haircut</h3>
+                    <p>
+                        A clean and professional haircut
+                        that fits your style.
+                    </p>
+                    <span>₦3,000</span>
+                </article>
+
+                <article class="service-card">
+                    <h3>Haircut & Beard</h3>
+                    <p>
+                        Complete grooming with a fresh haircut
+                        and perfectly shaped beard.
+                    </p>
+                    <span>₦5,000</span>
+                </article>
+
+                <article class="service-card">
+                    <h3>Kids Haircut</h3>
+                    <p>
+                        Stylish and comfortable haircuts
+                        for children.
+                    </p>
+                    <span>₦2,500</span>
+                </article>
+
+                <article class="service-card">
+                    <h3>Premium Grooming</h3>
+                    <p>
+                        The full BarberPro experience for
+                        your ultimate fresh look.
+                    </p>
+                    <span>₦7,000</span>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+
+            <div class="section-heading">
+                <p>OUR WORK</p>
+                <h2>Fresh Cuts, Fresh Looks</h2>
+            </div>
+
+            <div class="gallery-container">
+
+                <div class="gallery-item">
+                    <img src="images/cut-1.jpg.jpg" alt="Modern haircut">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/cut-2.jpg.jpg" alt="Men's haircut">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/cut-3.jpg.jpg" alt="Fresh haircut">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/cut-4.jpg" alt="Professional haircut">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Booking Section -->
+        <section id="booking" class="booking">
+
+            <div class="section-heading">
+                <p>BOOK YOUR VISIT</p>
+                <h2>Make an Appointment</h2>
+            </div>
+
+            <form id="booking-form">
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="08012345678"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Choose Service</label>
+
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="classic">Classic Haircut</option>
+                        <option value="haircut-beard">Haircut & Beard</option>
+                        <option value="kids">Kids Haircut</option>
+                        <option value="premium">Premium Grooming</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Anything we should know?"
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn">
+                    Book Appointment
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+
+            <div class="section-heading">
+                <p>GET IN TOUCH</p>
+                <h2>Contact Us</h2>
+            </div>
+
+            <div class="contact-info">
+
+                <div>
+                    <h3>Location</h3>
+                    <p>Lagos, Nigeria</p>
+                </div>
+
+                <div>
+                    <h3>Phone</h3>
+                    <p>08012345678</p>
+                </div>
+
+                <div>
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Saturday</p>
+                    <p>9:00 AM - 8:00 PM</p>
+                </div>
+
+            </div>
+
+            <a href="https://wa.me/+2348012345678" class="whatsapp-btn">
+                Chat With Us on WhatsApp
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <img src="images/logo.jpg" alt="BarberPro Logo">
+
+            <p>
+                Look sharp. Feel confident.
+            </p>
+
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#" aria-label="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 BarberPro. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

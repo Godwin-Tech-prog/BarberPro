@@ -1,0 +1,719 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* =========================
+   REUSABLE STYLES
+========================= */
+
+section {
+    padding: 90px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading p {
+    color: #c9a227;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #c9a227;
+    color: #111;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    border: 1px solid #c9a227;
+}
+
+.btn:hover {
+    background: #fff;
+    border-color: #fff;
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #c9a227;
+}
+
+.secondary-btn:hover {
+    background: #c9a227;
+    color: #111;
+}
+
+
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(17, 17, 17, 0.95);
+    border-bottom: 1px solid #292929;
+    z-index: 1000;
+}
+
+nav {
+    width: 84%;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c9a227;
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 100vh;
+    padding-top: 120px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #111 0%,
+            #111 45%,
+            #181818 100%
+        );
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.subtitle {
+    color: #c9a227;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero-content > p:not(.subtitle) {
+    color: #c0c0c0;
+    max-width: 520px;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-image {
+    height: 600px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    background: #151515;
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.about-image {
+    height: 480px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.about-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text h3 {
+    color: #c9a227;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #c0c0c0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   SERVICES SECTION
+========================= */
+
+.services {
+    background: #111;
+}
+
+.services-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: #1a1a1a;
+    border: 1px solid #292929;
+    padding: 30px 22px;
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #c9a227;
+}
+
+.service-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.service-card span {
+    color: #c9a227;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   GALLERY SECTION
+========================= */
+
+.gallery {
+    background: #151515;
+}
+
+.gallery-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.gallery-item {
+    height: 320px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #292929;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   BOOKING SECTION
+========================= */
+
+.booking {
+    background: #111;
+}
+
+#booking-form {
+    max-width: 750px;
+    margin: auto;
+
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #292929;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 15px;
+
+    background: #111;
+    color: #fff;
+
+    border: 1px solid #333;
+    border-radius: 4px;
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #c9a227;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+#booking-form .btn {
+    width: 100%;
+    cursor: pointer;
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact {
+    background: #151515;
+    text-align: center;
+}
+
+.contact-info {
+    max-width: 900px;
+    margin: 0 auto 40px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-info > div {
+    background: #1a1a1a;
+    border: 1px solid #292929;
+    padding: 25px 15px;
+    border-radius: 8px;
+}
+
+.contact-info h3 {
+    color: #c9a227;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #bbb;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    background: #25d366;
+    color: #fff;
+    padding: 14px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0b0b0b;
+    padding: 50px 8% 25px;
+    text-align: center;
+    border-top: 1px solid #292929;
+}
+
+.footer-content img {
+    width: 150px;
+    align-items: center;
+    margin-left: 45%;
+}
+
+.footer-content > p {
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #c9a227;
+}
+
+.copyright {
+    color: #666;
+    font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero-content > p:not(.subtitle) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        height: 500px;
+        max-width: 650px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 70px 6%;
+    }
+
+    nav {
+        width: 88%;
+    }
+
+    .logo img{
+        width: 125px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+
+        background: #111;
+        border-top: 1px solid #292929;
+        border-bottom: 1px solid #292929;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px;
+    }
+
+    .nav-links a:hover {
+        background: #1c1c1c;
+    }
+
+    /*
+       JavaScript will add this class
+       when we build the hamburger menu.
+    */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        padding-top: 110px;
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-content > p:not(.subtitle) {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-image {
+        height: 420px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .about-image {
+        height: 380px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        text-align: center;
+    }
+
+     .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 400px;
+    }
+
+    #booking-form {
+        padding: 25px 20px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .gallery-item {
+        height: 330px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+}
